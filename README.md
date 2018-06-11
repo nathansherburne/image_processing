@@ -4,17 +4,18 @@ This is a simplified image processing app of the likes of Photoshop. I wrote the
 
 ## Screenshots
 
-Converting to grayscale:
+#### Converting to grayscale:
 ![screenshot](screenshots/img_proc_gray.jpg)
 
-Applying Guassian blur:
+#### Applying Guassian blur:
 ![screenshot](screenshots/img_proc_blur.jpg)
 
-Generating blue-band histogram:
+#### Generating blue-band histogram:
 ![screenshot](screenshots/img_proc_hist.jpg)
 
-Generating Cumulative Distribution Function after equalizing the image:
+#### Generating Cumulative Distribution Function after equalizing the image:
 ![screenshot](screenshots/img_proc_eq.jpg)
 
-Performing morphological transformations after applying a threshold:
+#### Performing morphological transformations after applying a threshold:
 ![screenshot](screenshots/img_proc_morph.jpg)
+

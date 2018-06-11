@@ -585,7 +585,7 @@ public class Imgproc {
 
 	public static BufferedImage getHistogramPDF(BufferedImage image, int band) {
 		Histogram h = new Histogram(image);
-		return h.getPDFImage(image.getWidth(), image.getHeight(), 0.05f, 0);
+		return h.getPMFImage(image.getWidth(), image.getHeight(), 0.05f, 0);
 	}
 
 	private static BufferedImage filter(BufferedImage img, int kSize, int[] which) {

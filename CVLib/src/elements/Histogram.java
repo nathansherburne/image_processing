@@ -68,7 +68,7 @@ public class Histogram {
 		return 0;
 	}
 	
-	public double[] getPDF(int band) {
+	public double[] getPMF(int band) {
 		int[] grays = getHistogram(band);
 		double[] pdf = new double[grays.length];
 		for(int i = 0; i < grays.length; i++) {
@@ -78,7 +78,7 @@ public class Histogram {
 	}
 	
 	public double[] getCDF(int band) {
-		double[] pdf = getPDF(band);
+		double[] pdf = getPMF(band);
 		double[] cdf = new double[pdf.length];
 		double total = 0;
 		for(int i = 0; i < pdf.length; i++) {
@@ -88,16 +88,16 @@ public class Histogram {
 		return cdf;
 	}
 	
-	public BufferedImage getPDFImage(int band) {
-		return getPDFImage(getImage().getWidth(), getImage().getHeight(), 0.05f, band);
+	public BufferedImage getPMFImage(int band) {
+		return getPMFImage(getImage().getWidth(), getImage().getHeight(), 0.05f, band);
 	}
 	
 	public BufferedImage getCDFImage(int band) {
 		return getCDFImage(getImage().getWidth(), getImage().getHeight(), 0.05f, band);
 	}
 	
-	public BufferedImage getPDFImage(int width, int height, float marginScale, int band) {
-		return getHistogramImage(width, height, marginScale, band, getPDF(band));
+	public BufferedImage getPMFImage(int width, int height, float marginScale, int band) {
+		return getHistogramImage(width, height, marginScale, band, getPMF(band));
 	}
 	
 	public BufferedImage getCDFImage(int width, int height, float marginScale, int band) {

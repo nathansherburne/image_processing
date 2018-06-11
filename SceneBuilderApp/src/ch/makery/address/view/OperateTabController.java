@@ -125,10 +125,10 @@ public class OperateTabController implements Initializable {
 			String histType = currentParams.get(1).getText();
 			if(histType.equals("CDF") || histType.equals("cdf") || histType.equals("c") || histType.equals("C")) {
 				img = histogram.getCDFImage(band);
-			} else if(histType.equals("PDF") || histType.equals("pdf") || histType.equals("p") || histType.equals("P")) {
-				img = histogram.getPDFImage(band);
+			} else if(histType.equals("PMF") || histType.equals("pmf") || histType.equals("p") || histType.equals("P")) {
+				img = histogram.getPMFImage(band);
 			} else {
-				errorLabel.setText("Histogram type: CDF or PDF");
+				errorLabel.setText("Histogram type: CDF or PMF");
 				return;
 			}
 		} else if (selectedMethod == "Erode") {
@@ -346,7 +346,7 @@ public class OperateTabController implements Initializable {
 		methodParams.put("Inverse Fourier Transform", new Parameter[] {});
 		
 		// 1 parameter operations
-		methodParams.put("Histogram", new Parameter[] { new Parameter<Integer>("band", Integer.class, true, 0), new Parameter<String>("CDF or PDF", String.class) });
+		methodParams.put("Histogram", new Parameter[] { new Parameter<Integer>("band", Integer.class, true, 0), new Parameter<String>("CDF or PMF", String.class) });
 		methodParams.put("Threshold", new Parameter[] { new Parameter<Integer>("threshold", Integer.class) });
 		methodParams.put("Adaptive Threshold",
 				new Parameter[] { new Parameter<Integer>("kernel size", Integer.class) });

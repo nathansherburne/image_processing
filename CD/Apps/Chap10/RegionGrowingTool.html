@@ -1,0 +1,57 @@
+<html>
+<head>
+<link rel=stylesheet type="text/css" href="../../base.css">
+<title>
+Digital Imaging Processing / Java Applications / RegionGrowingTool
+</title>
+</head>
+<body>
+
+<a href="index.html">
+ <img src="../../Images/up.gif" border=0 align="middle" alt="up"></a>
+
+<hr size=1>
+
+<h3 align="center">Chapter 10: Segmentation</h3>
+<h2 align="center">RegionGrowingTool</h2>
+
+<p align="center">
+<img src="RegionGrowingTool.gif" alt="screendump of RegionGrowingTool">
+</p>
+
+<p> The <code>RegionGrowingTool</code> application displays an image read
+from a file and allows the user to mark seed pixels.  Regions can then be
+grown from these seeds.  The growing regions are overlaid on the image,
+allowing progress to be monitored easily. </p>
+
+<p> Once regions have been grown, they can be saved to a file as an image.
+The user also has the option of starting again from the same seeds (possibly
+adding more to the image) or of starting again with a new set of seeds.
+This is useful when experimenting with different connectivities or
+thresholds.  Menu options permit switching between 4- and 8-connectivity,
+and a threshold can be specified in the text field beneath the image.  </p>
+
+<p> The file <code>RegionGrowingTool.java</code> compiles to produce </p>
+
+<pre>
+  RegionGrowingTool.class
+  RegionGrowingTool$1.class
+  RegionGrowingTool$Threshold.class
+  RegionGrowingTool$View.class
+</pre>
+
+<p> These <code>.class</code> files have been packaged as a single JAR file,
+<code>RegionGrowingTool.jar</code>.  You can install the application by
+copying this JAR file, along with either the MS-DOS batch file
+<code>RegionGrowingTool.bat</code> or the <em>bash</em> shell script
+<code>RegionGrowingTool.sh</code>, as appropriate.  The batch file or
+script should be edited to reflect the new location of the JAR file.</p>
+
+<p>
+<hr size=1>
+<a href="index.html">
+ <img src="../../Images/up.gif" border=0 align="middle" alt="up"></a>
+</p>
+
+</body>
+</html>

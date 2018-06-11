@@ -1,0 +1,132 @@
+<html>
+<head>
+<link rel=stylesheet type="text/css" href="../base.css">
+<title>
+Digital Imaging Processing / Java Applications / Installation Guide
+</title>
+</head>
+<body>
+
+<a href="index.html">
+ <img src="../Images/up.gif" border=0 align="middle" alt="up"></a>
+
+<hr size=1>
+
+<h3 align="center">Java Applications</h3>
+<h2 align="center">Installation Guide</h2>
+
+<p> The software on this CD requires the Java 2 platform, so your first step
+should be to verify that is is available on your system.  If you do not have
+Java 2 installed, it can be acquired from
+<a href="http://java.sun.com/">http://java.sun.com</a>. </p>
+
+<p> The applications use a class library provided on this CD.  You must
+configure Java to access this library, either from the CD or from a
+directory on your hard disk into which you install the library.  Details are
+given in the <a href="../Classes/index.html">class library
+documentation</a>. </p>
+
+<h4>Installing the Full Set of Applications</h4>
+
+<p> If you wish to install all the applications on your hard disk, the
+simplest approach is to create a single directory for them and then copy the
+following files to that directory: </p>
+
+<ul>
+  <li> <em>All</em> the <code>.class</code> files in every subdirectory
+  of the <code>Apps</code> directory </li>
+  <li> <code>magnify.gif</code> from subdirectory <code>Chap05</code> </li>
+  <li> <code>equals.gif</code> and <code>star.gif</code> from subdirectory
+  <code>Chap07</code> </li>
+</ul>
+
+<p> You will then need to modify your classpath to point to this directory.
+(This is in addition to the modifications made to the classpath so that Java
+can locate the <a href="../Classes/index.html">class library</a>.)
+For example, suppose you have installed the applications to the directory
+<code>C:\IPTools</code> on an MS-Windows system.  You would then do </p>
+
+<pre>
+  set CLASSPATH=%CLASSPATH%;C:\IPTools
+</pre>
+
+<p> This command could be put into a batch file that you execute after
+opening a window with the MS-DOS prompt; alternatively, it could be added
+to your <code>AUTOEXEC.BAT</code> file. (This would save you the trouble
+of having to configure the classpath each time you opened an MS-DOS
+window.) </p>
+
+<p> A similar approach can be used on UNIX systems.  For example, on a
+machine running the <em>bash</em> shell, you can do </p>
+
+<pre>
+  CLASSPATH=$CLASSPATH\:/home/nick/IPTools
+  export CLASSPATH
+</pre>
+
+<p> or similar. (If you don't have the <em>bash</em> shell, consult your
+shell's documentation for precise details of how to configure environment
+variables.) </p>
+
+<h4>Installing Selected GUI-based Applications</h4>
+
+<p> For the GUI-based applications, which typically consist of several
+<code>.class</code> files, a different method of installation is supported.
+For each of these applications, copies of the <code>.class</code> files
+have been packaged as a single JAR (Java Archive) file, located in the same
+directory as the <code>.class</code> files.  Certain of the applications
+have icons loaded from GIF images, and these, too, have been added to the
+JAR files where necessary.  Each JAR file therefore contains all the code
+and data associated with the application. </p>
+
+<p> For each application packaged as a JAR file, there is a corresponding
+MS-DOS batch file and <em>bash</em> shell script that you may use to
+invoke the Java interpreter on the code contained in the JAR file.  All you
+need to do is copy the JAR file somewhere, then copy the batch file or
+shell script to a directory that is searched for such things.  The batch
+file or shell script will need to be edited so that it can locate the
+JAR file.  (The latter can be installed in the same directory as the batch
+file / shell script if you wish to keep the two together.)</p>
+
+<p> This approach has the advantage of neatness.  It keeps related
+<code>.class</code> files together, avoiding needless clutter in your
+directories; it also allow you to keep applications separate from one
+another, if you wish.  Finally, it does not require permanent modification
+of your classpath.  (The modifications necessary to run the application are
+made temporarily, by the batch file or shell script.) </p>
+
+<h4>Running the Applications</h4>
+
+<p> If you have elected to install the <code>.class</code> files in a single
+directory and you have configured your classpath appropriately, running the
+applications will simply involve specifying the main class name of the
+application as a command line parameter of the <code>java</code> command.
+Examples include
+
+<pre>
+  java Convert foo.png foo.jpg
+  java GreyMapTool dark.png
+  java ConvolutionTool bar.png 5 5
+</pre>
+
+<p> If you have installed a GUI application in the form of a JAR file plus a
+batch file or shell script, then you simply need to type the name of the
+script, followed by any command line parameters.  For example, suppose you
+have installed <code>ImageViewer.sh</code> in <code>~/bin</code> as the
+file <code>ImageViewer</code>, and that <code>ImageViewer.jar</code> is
+installed somewhere referenced by that script.  Assuming that
+<code>~/bin</code> is in your path and that execute permission has
+been set for the script, an image can now be displayed with the command </p>
+
+<pre>
+  ImageViewer foo.png
+</pre>
+
+<p>
+<hr size=1>
+<a href="index.html">
+ <img src="../Images/up.gif" border=0 align="middle" alt="up"></a>
+</p>
+
+</body>
+</html>

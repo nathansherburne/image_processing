@@ -1,0 +1,10 @@
+# binary structuring element
+# width=5
+# height=5
+# xorigin=2
+# yorigin=2
+00100
+01110
+11111
+01110
+00100

@@ -1,0 +1,8 @@
+# grey structuring element
+# width=3
+# height=3
+# xorigin=1
+# yorigin=1
+    1    1    1
+    1    1    1
+    1    1    1

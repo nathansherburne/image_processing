@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane prefHeight="674.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.MainTabController">
+	<bottom>
+		<HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="850.0" spacing="5.0" BorderPane.alignment="CENTER">
+			<children>
+				<Button mnemonicParsing="false" onAction="#addImageViewButton" text="+">
+					<HBox.margin>
+						<Insets left="5.0" />
+					</HBox.margin>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#removeImageViewButton" prefHeight="25.0" prefWidth="27.0" text="-" />
+            <Button fx:id="recordButton" mnemonicParsing="false" onAction="#onRecordButtonClick" prefHeight="25.0" prefWidth="30.0">
+               <tooltip>
+                  <Tooltip text="Record a sequence of operations" />
+               </tooltip>
+            </Button>
+            <TextField fx:id="customOperationNameField" promptText="Custom Operation Name" />
+            <Button mnemonicParsing="false" onAction="#onSaveCustomOperationClick" prefHeight="25.0" prefWidth="78.0" text="Save Op" />
+				<Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="selectedImageViewType" />
+				<Label prefHeight="15.0" prefWidth="91.0" text="Selected: " />
+				<Label fx:id="selectedImageViewNumber" />
+			</children>
+		</HBox>
+	</bottom>
+	<center>
+		<ScrollPane fitToWidth="true">
+			<content>
+				<FlowPane fx:id="imageFlowPane" alignment="TOP_CENTER" hgap="5.0" onMouseClicked="#onFlowPaneClick" vgap="5.0" />
+			</content>
+		</ScrollPane>
+	</center>
+	<right>
+		<TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab text="Operations">
+					<content>
+						<fx:include fx:id="operateTab" source="OperateTab.fxml" />
+					</content>
+				</Tab>
+				<Tab text="Calculate">
+					<content>
+						<fx:include fx:id="calculateTab" source="CalculateTab.fxml" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</right>
+</BorderPane>

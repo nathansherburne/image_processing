@@ -1,0 +1,62 @@
+<html>
+<head>
+<link rel=stylesheet type="text/css" href="../../base.css">
+<title>
+Digital Imaging Processing / Java Applications / ImageViewer 
+</title>
+</head>
+<body>
+
+<a href="index.html">
+ <img src="../../Images/up.gif" border=0 align="middle" alt="up"></a>
+
+<hr size=1>
+
+<h3 align="center">Chapter 5: Basic Image Manipulation</h3>
+<h2 align="center">ImageViewer</h2>
+
+<p align="center">
+<img src="ImageViewer.gif" alt="screendump of ImageViewer (main window)"
+ align="center"> &nbsp;
+<img src="Magnifier.gif" alt="screendump of ImageViewer's magnifier"
+ align="center">
+</p>
+
+<p> The <code>ImageViewer</code> application displays an image.  If the
+image is large, a smaller viewport is displayed, along with scrollbars that
+move the viewport elsewhere in the image.  As the cursor moves over the
+image, the coordinates of the underlying image pixel and its scalar or
+vector value are updated on an information panel beneath the image.  A
+magnifier button reveals or dismisses a magnifier view of the region
+surrounding the cursor.</p>
+
+<p> The application consists of source files <code>ImageViewer.java</code>,
+<code>Magnifier.java</code> and <code>PixelInfoPane.java</code>, plus an
+icon file, <code>magnify.gif</code>.  Compilation of the source code
+generates the <code>.class</code> files</p>
+<pre>
+  ImageViewer.class
+  ImageViewer$1.class
+  ImageViewer$2.class
+  ImageViewer$3.class
+  ImageViewer$Scroller.class
+  Magnifier.class
+  Magnifier$1.class
+  PixelInfoPane.class
+</pre>
+
+<p> These and the icon have been packaged as a single JAR file,
+<code>ImageViewer.jar</code>.  You can install the application by copying
+this JAR file, along with either the MS-DOS batch file
+<code>LogPolar.bat</code> or the <em>bash</em> shell script
+<code>LogPolar.sh</code>, as appropriate.  The batch file or script should
+be edited to reflect the new location of the JAR file.</p>
+
+<p>
+<hr size=1>
+<a href="index.html">
+ <img src="../../Images/up.gif" border=0 align="middle" alt="up"></a>
+</p>
+
+</body>
+</html>

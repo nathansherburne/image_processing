@@ -1,0 +1,43 @@
+body {
+  background-color: #ffffff;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin: 0.5cm 1cm
+}
+
+p {
+  font-size: 10pt
+}
+
+ul {
+  list-style-type: disc;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt
+}
+
+ol {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt
+}
+
+th {
+  background-color: #cccccc;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt
+}
+
+td {
+  background-color: #f0f0f0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt
+}
+
+code {
+  font-family: "Lucida Sans Typewriter", Courier, monospace
+}
+
+pre {
+  font-family: "Lucida Sans Typewriter", Courier, monospace
+}
+
+a:link { color: #ff0000 }
+a:visited { color: #a00000 }
